@@ -112,15 +112,15 @@ export default function WeatherWidget() {
 
   return (
     <div className="flex justify-center items-center h-screen">
-      <Card className="w-full max-w-md mx-auto text-center bg-[#84CAE7]">
+      <Card className="mx-auto text-center w-[600px] h-[300px] bg-[#84CAE7]">
         <CardHeader>
-          <CardTitle className="font-bold">Weather Widget</CardTitle>
-          <CardDescription className="font-semibold">
+          <CardTitle className="text-3xl font-bold p-2 m-2">Weather Widget</CardTitle>
+          <CardDescription className="font-bold text-lg text-slate-700 p-2 m-2">
             Search for the current weather conditions in your city.
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <form onSubmit={handleSearch} className="flex items-center gap-2">
+          <form onSubmit={handleSearch} className="flex items-center font-bold gap-2">
             <Input
               type="text"
               placeholder="Enter a city name"
@@ -129,11 +129,11 @@ export default function WeatherWidget() {
                 setLocation(e.target.value)
               }
             />
-            <Button type="submit" disabled={isLoading} className="bg-[#175676] hover:bg-[#175676]/70">
+            <Button type="submit" disabled={isLoading} className="bg-[#175676] m-1 hover:bg-[#175676]/70">
               {isLoading ? "Loading..." : "Search"}
             </Button>
           </form>
-          {error && <div className="mt-4 text-red-500">{error}</div>}
+          {error && <div className="mt-4 font-semibold text-red-600">{error}</div>}
           {weather && (
             <div className="mt-4 grid gap-2">
               <div className="flex items-center gap-2 font-bold">
