@@ -112,7 +112,7 @@ export default function WeatherWidget() {
 
   return (
     <div className="flex justify-center items-center h-screen">
-      <Card className="mx-auto text-center w-[600px] h-[300px] bg-[#84CAE7]">
+      <Card className="mx-auto text-center w-[600px] h-[400px] bg-[#84CAE7]">
         <CardHeader>
           <CardTitle className="text-3xl font-bold p-2 m-2">Weather Widget</CardTitle>
           <CardDescription className="font-bold text-lg text-slate-700 p-2 m-2">
@@ -137,15 +137,15 @@ export default function WeatherWidget() {
           {weather && (
             <div className="mt-4 grid gap-2">
               <div className="flex items-center gap-2 font-bold">
-                <ThermometerIcon className="w-6 h-6" />
+                <ThermometerIcon className="w-6 m-1 h-6" />
                 {getTemperatureMessage(weather.temperature, weather.unit)}
               </div>
               <div className="flex items-center gap-2">
-                <CloudIcon className="w-6 h-6 " />
+                <CloudIcon className="w-6 m-1 h-6 " />
                 <div className="font-bold">{getWeatherMessage(weather.description)}</div>
               </div>
               <div className="flex items-center gap-2">
-                <MapPinIcon className="w-6 h-6 " />
+                <MapPinIcon className="w-6 m-1 h-6 " />
                 <div className="font-bold">{getLocationMessage(weather.location)}</div>
               </div>
             </div>
