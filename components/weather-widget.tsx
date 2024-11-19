@@ -31,7 +31,7 @@ export default function WeatherWidget() {
       setError("Please enter a valid location.");
       setWeather(null);
       return;
-    }
+    } 
 
     setIsLoading(true);
     setError(null);
