@@ -143,7 +143,7 @@ export default function WeatherWidget() {
                     placeholder="Enter a city name..."
                     value={location}
                     onChange={(e: ChangeEvent<HTMLInputElement>) => setLocation(e.target.value)}
-                    className="pl-10 h-12 text-lg border-2 border-gray-200 focus:border-blue-500 transition-colors"
+                    className="pl-10 h-12 text-sm md:text-lg border-2 border-gray-200 focus:border-blue-500 transition-colors"
                   />
                 </div>
                 <Button
